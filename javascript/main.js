@@ -15,6 +15,9 @@ window.onload = function () {
         element.style.animationName = "bar_in"
         element.style.animationDuration = "0s"
         element.style.animationFillMode = "forwards"
+        element.style.webkitAnimationName = "bar_in"
+        element.style.webkitAnimationDuration = "0s"
+        element.style.webkitAnimationFillMode = "forwards"
     } else {
         if (window.pageYOffset > 20) {
             alreadyScrolled = true;
@@ -24,6 +27,14 @@ window.onload = function () {
             dropelement2.style.animationName = "drop_up"
             dropelement2.style.animationDuration = "0s"
             dropelement2.style.animationFillMode = "forwards"
+
+            element.style.webkitAnimationName = "bar_in"
+            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationFillMode = "forwards"
+            dropelement2.style.webkitAnimationName = "drop_up"
+            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationFillMode = "forwards"
+
             dropelement.style.display = "none"
             open = false;
         } else if (window.pageYOffset < 20) {
@@ -34,6 +45,27 @@ window.onload = function () {
             dropelement2.style.animationName = "drop_up"
             dropelement2.style.animationDuration = "0s"
             dropelement2.style.animationFillMode = "forwards"
+
+            element.style.webkitAnimationName = "bar_out"
+            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationFillMode = "forwards"
+            dropelement2.style.webkitAnimationName = "drop_up"
+            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationFillMode = "forwards"
+
+            element.style.animationName = "bar_out"
+            element.style.animationDuration = "0s"
+            element.style.animationFillMode = "forwards"
+            dropelement2.style.animationName = "drop_up"
+            dropelement2.style.animationDuration = "0s"
+            dropelement2.style.animationFillMode = "forwards"
+
+            element.style.webkitAnimationName = "bar_out"
+            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationFillMode = "forwards"
+            dropelement2.style.webkitAnimationName = "drop_up"
+            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationFillMode = "forwards"
             dropelement.style.display = "none"
             open = false;
         }
@@ -296,32 +328,82 @@ function DropDown() {
         dropelement2.style.animationName = "drop_up"
         dropelement2.style.animationDuration = "0.5s"
         dropelement2.style.animationFillMode = "forwards"
+
+        dropelement2.style.webkitAnimationName = "drop_up"
+        dropelement2.style.webkitAnimationDuration = "0.5s"
+        dropelement2.style.webkitAnimationFillMode = "forwards"
         open = false;
     } else {
         dropelement.style.display = "block"
         dropelement2.style.animationName = "drop_down"
         dropelement2.style.animationDuration = "0.5s"
         dropelement2.style.animationFillMode = "forwards"
+
+        dropelement2.style.webkitAnimationName = "drop_down"
+        dropelement2.style.webkitAnimationDuration = "0.5s"
+        dropelement2.style.webkitAnimationFillMode = "forwards"
+
         open = true;
     }
 }
 function testScroll() {
     if (window.innerWidth < 768) {
+        element.style.animationName = "bar_in"
+        element.style.animationDuration = "0s"
+        element.style.animationFillMode = "forwards"
+        element.style.webkitAnimationName = "bar_in"
+        element.style.webkitAnimationDuration = "0s"
+        element.style.webkitAnimationFillMode = "forwards"
     } else {
         if (window.pageYOffset > 20) {
-            if (!alreadyScrolled) {
-                alreadyScrolled = true;
-                element.style.animationName = "bar_in"
-                element.style.animationDuration = "0.5s"
-                element.style.animationFillMode = "forwards"
-            }
+            alreadyScrolled = true;
+            element.style.animationName = "bar_in"
+            element.style.animationDuration = "0s"
+            element.style.animationFillMode = "forwards"
+            dropelement2.style.animationName = "drop_up"
+            dropelement2.style.animationDuration = "0s"
+            dropelement2.style.animationFillMode = "forwards"
+
+            element.style.webkitAnimationName = "bar_in"
+            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationFillMode = "forwards"
+            dropelement2.style.webkitAnimationName = "drop_up"
+            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationFillMode = "forwards"
+
+            dropelement.style.display = "none"
+            open = false;
         } else if (window.pageYOffset < 20) {
-            if (alreadyScrolled) {
-                alreadyScrolled = false;
-                element.style.animationName = "bar_out"
-                element.style.animationDuration = "0.5s"
-                element.style.animationFillMode = "forwards"
-            }
+            alreadyScrolled = false;
+            element.style.animationName = "bar_out"
+            element.style.animationDuration = "0s"
+            element.style.animationFillMode = "forwards"
+            dropelement2.style.animationName = "drop_up"
+            dropelement2.style.animationDuration = "0s"
+            dropelement2.style.animationFillMode = "forwards"
+
+            element.style.webkitAnimationName = "bar_out"
+            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationFillMode = "forwards"
+            dropelement2.style.webkitAnimationName = "drop_up"
+            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationFillMode = "forwards"
+
+            element.style.animationName = "bar_out"
+            element.style.animationDuration = "0s"
+            element.style.animationFillMode = "forwards"
+            dropelement2.style.animationName = "drop_up"
+            dropelement2.style.animationDuration = "0s"
+            dropelement2.style.animationFillMode = "forwards"
+
+            element.style.webkitAnimationName = "bar_out"
+            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationFillMode = "forwards"
+            dropelement2.style.webkitAnimationName = "drop_up"
+            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationFillMode = "forwards"
+            dropelement.style.display = "none"
+            open = false;
         }
     }
 }
@@ -329,27 +411,59 @@ window.onscroll = testScroll
 window.onresize = function () {
     if (window.innerWidth < 768) {
         element.style.animationName = "bar_in"
-        element.style.animationDuration = "0.5s"
+        element.style.animationDuration = "0s"
         element.style.animationFillMode = "forwards"
+        element.style.webkitAnimationName = "bar_in"
+        element.style.webkitAnimationDuration = "0s"
+        element.style.webkitAnimationFillMode = "forwards"
     } else {
         if (window.pageYOffset > 20) {
             alreadyScrolled = true;
             element.style.animationName = "bar_in"
-            element.style.animationDuration = "0.5s"
+            element.style.animationDuration = "0s"
             element.style.animationFillMode = "forwards"
             dropelement2.style.animationName = "drop_up"
-            dropelement2.style.animationDuration = "0.5s"
+            dropelement2.style.animationDuration = "0s"
             dropelement2.style.animationFillMode = "forwards"
+
+            element.style.webkitAnimationName = "bar_in"
+            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationFillMode = "forwards"
+            dropelement2.style.webkitAnimationName = "drop_up"
+            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationFillMode = "forwards"
+
             dropelement.style.display = "none"
             open = false;
         } else if (window.pageYOffset < 20) {
             alreadyScrolled = false;
             element.style.animationName = "bar_out"
-            element.style.animationDuration = "0.5s"
+            element.style.animationDuration = "0s"
             element.style.animationFillMode = "forwards"
             dropelement2.style.animationName = "drop_up"
-            dropelement2.style.animationDuration = "0.5s"
+            dropelement2.style.animationDuration = "0s"
             dropelement2.style.animationFillMode = "forwards"
+
+            element.style.webkitAnimationName = "bar_out"
+            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationFillMode = "forwards"
+            dropelement2.style.webkitAnimationName = "drop_up"
+            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationFillMode = "forwards"
+
+            element.style.animationName = "bar_out"
+            element.style.animationDuration = "0s"
+            element.style.animationFillMode = "forwards"
+            dropelement2.style.animationName = "drop_up"
+            dropelement2.style.animationDuration = "0s"
+            dropelement2.style.animationFillMode = "forwards"
+
+            element.style.webkitAnimationName = "bar_out"
+            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationFillMode = "forwards"
+            dropelement2.style.webkitAnimationName = "drop_up"
+            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationFillMode = "forwards"
             dropelement.style.display = "none"
             open = false;
         }

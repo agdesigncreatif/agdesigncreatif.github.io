@@ -35,6 +35,7 @@
             anim.style.background = "url('img/image1.jpg') no-repeat center center"
             anim.style.backgroundSize = "cover";
             anim.style.animation = "test 20s ease infinite";
+            anim.style.webkitAnimation = "test 20s ease infinite";
             anim.style.left = "-100px";
             anim.style.top = "-100px";
             anim.style.position = "fixed";
@@ -58,6 +59,7 @@
 
             anim.style.backgroundSize = "cover";
             anim.style.animation = "test 20s ease infinite";
+            anim.style.webkitAnimation = "test 20s ease infinite";
             anim.style.left = "-100px";
             anim.style.top = "-100px";
             anim.style.position = "fixed";
@@ -67,7 +69,6 @@
         anim.addEventListener('oAnimationIteration', changeImage, false);
         anim.addEventListener('animationiteration', changeImage, false);
         anim.addEventListener('msAnimationIteration', changeImage, false);
-
 
     </script>
 </body>

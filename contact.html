@@ -22,6 +22,9 @@
             margin-left: 10px;
             margin-right: 10px;
             transition-duration: 0.7s;
+            -webkit-transition-duration: 0.7s;
+            -moz-transition-duration: 0.7s;
+            -o-transition-duration: 0.7s;
         }
 
         .social-media a {
@@ -29,7 +32,10 @@
             border:none;
         }
         .social-media:hover {
-            filter: brightness(1.5)
+            filter: brightness(1.5);
+            -webkit-filter: brightness(1.5);
+            -ms-filter: brightness(1.5);
+            -moz-filter: brightness(1.5);
         }
         @media only screen and (min-width: 768px) {
             #main-frame {
@@ -76,12 +82,18 @@
                 dropelement2.style.animationName = "drop_up"
                 dropelement2.style.animationDuration = "0.5s"
                 dropelement2.style.animationFillMode = "forwards"
+                dropelement2.style.webkitAnimationName = "drop_up"
+                dropelement2.style.webkitAnimationDuration = "0.5s"
+                dropelement2.style.webkitAnimationFillMode = "forwards"
                 open = false;
             } else {
                 dropelement.style.display = "block"
                 dropelement2.style.animationName = "drop_down"
                 dropelement2.style.animationDuration = "0.5s"
                 dropelement2.style.animationFillMode = "forwards"
+                dropelement2.style.webkitAnimationName = "drop_down"
+                dropelement2.style.webkitAnimationDuration = "0.5s"
+                dropelement2.style.webkitAnimationFillMode = "forwards"
                 open = true;
             }
         }
