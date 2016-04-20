@@ -349,26 +349,26 @@ function DropDown() {
 function testScroll() {
     if (window.innerWidth < 768) {
         element.style.animationName = "bar_in"
-        element.style.animationDuration = "0s"
+        element.style.animationDuration = "1s"
         element.style.animationFillMode = "forwards"
         element.style.webkitAnimationName = "bar_in"
-        element.style.webkitAnimationDuration = "0s"
+        element.style.webkitAnimationDuration = "1s"
         element.style.webkitAnimationFillMode = "forwards"
     } else {
         if (window.pageYOffset > 20) {
             alreadyScrolled = true;
             element.style.animationName = "bar_in"
-            element.style.animationDuration = "0s"
+            element.style.animationDuration = "1s"
             element.style.animationFillMode = "forwards"
             dropelement2.style.animationName = "drop_up"
-            dropelement2.style.animationDuration = "0s"
+            dropelement2.style.animationDuration = "1s"
             dropelement2.style.animationFillMode = "forwards"
 
             element.style.webkitAnimationName = "bar_in"
-            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationDuration = "1s"
             element.style.webkitAnimationFillMode = "forwards"
             dropelement2.style.webkitAnimationName = "drop_up"
-            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationDuration = "1s"
             dropelement2.style.webkitAnimationFillMode = "forwards"
 
             dropelement.style.display = "none"
@@ -376,31 +376,31 @@ function testScroll() {
         } else if (window.pageYOffset < 20) {
             alreadyScrolled = false;
             element.style.animationName = "bar_out"
-            element.style.animationDuration = "0s"
+            element.style.animationDuration = "1s"
             element.style.animationFillMode = "forwards"
             dropelement2.style.animationName = "drop_up"
-            dropelement2.style.animationDuration = "0s"
+            dropelement2.style.animationDuration = "1s"
             dropelement2.style.animationFillMode = "forwards"
 
             element.style.webkitAnimationName = "bar_out"
-            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationDuration = "1s"
             element.style.webkitAnimationFillMode = "forwards"
             dropelement2.style.webkitAnimationName = "drop_up"
-            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationDuration = "1s"
             dropelement2.style.webkitAnimationFillMode = "forwards"
 
             element.style.animationName = "bar_out"
-            element.style.animationDuration = "0s"
+            element.style.animationDuration = "1s"
             element.style.animationFillMode = "forwards"
             dropelement2.style.animationName = "drop_up"
-            dropelement2.style.animationDuration = "0s"
+            dropelement2.style.animationDuration = "1s"
             dropelement2.style.animationFillMode = "forwards"
 
             element.style.webkitAnimationName = "bar_out"
-            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationDuration = "1s"
             element.style.webkitAnimationFillMode = "forwards"
             dropelement2.style.webkitAnimationName = "drop_up"
-            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationDuration = "1s"
             dropelement2.style.webkitAnimationFillMode = "forwards"
             dropelement.style.display = "none"
             open = false;
@@ -411,26 +411,26 @@ window.onscroll = testScroll
 window.onresize = function () {
     if (window.innerWidth < 768) {
         element.style.animationName = "bar_in"
-        element.style.animationDuration = "0s"
+        element.style.animationDuration = "1s"
         element.style.animationFillMode = "forwards"
         element.style.webkitAnimationName = "bar_in"
-        element.style.webkitAnimationDuration = "0s"
+        element.style.webkitAnimationDuration = "1s"
         element.style.webkitAnimationFillMode = "forwards"
     } else {
         if (window.pageYOffset > 20) {
             alreadyScrolled = true;
             element.style.animationName = "bar_in"
-            element.style.animationDuration = "0s"
+            element.style.animationDuration = "1s"
             element.style.animationFillMode = "forwards"
             dropelement2.style.animationName = "drop_up"
-            dropelement2.style.animationDuration = "0s"
+            dropelement2.style.animationDuration = "1s"
             dropelement2.style.animationFillMode = "forwards"
 
             element.style.webkitAnimationName = "bar_in"
-            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationDuration = "1s"
             element.style.webkitAnimationFillMode = "forwards"
             dropelement2.style.webkitAnimationName = "drop_up"
-            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationDuration = "1s"
             dropelement2.style.webkitAnimationFillMode = "forwards"
 
             dropelement.style.display = "none"
@@ -438,31 +438,31 @@ window.onresize = function () {
         } else if (window.pageYOffset < 20) {
             alreadyScrolled = false;
             element.style.animationName = "bar_out"
-            element.style.animationDuration = "0s"
+            element.style.animationDuration = "1s"
             element.style.animationFillMode = "forwards"
             dropelement2.style.animationName = "drop_up"
-            dropelement2.style.animationDuration = "0s"
+            dropelement2.style.animationDuration = "1s"
             dropelement2.style.animationFillMode = "forwards"
 
             element.style.webkitAnimationName = "bar_out"
-            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationDuration = "1s"
             element.style.webkitAnimationFillMode = "forwards"
             dropelement2.style.webkitAnimationName = "drop_up"
-            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationDuration = "1s"
             dropelement2.style.webkitAnimationFillMode = "forwards"
 
             element.style.animationName = "bar_out"
-            element.style.animationDuration = "0s"
+            element.style.animationDuration = "1s"
             element.style.animationFillMode = "forwards"
             dropelement2.style.animationName = "drop_up"
-            dropelement2.style.animationDuration = "0s"
+            dropelement2.style.animationDuration = "1s"
             dropelement2.style.animationFillMode = "forwards"
 
             element.style.webkitAnimationName = "bar_out"
-            element.style.webkitAnimationDuration = "0s"
+            element.style.webkitAnimationDuration = "1s"
             element.style.webkitAnimationFillMode = "forwards"
             dropelement2.style.webkitAnimationName = "drop_up"
-            dropelement2.style.webkitAnimationDuration = "0s"
+            dropelement2.style.webkitAnimationDuration = "1s"
             dropelement2.style.webkitAnimationFillMode = "forwards"
             dropelement.style.display = "none"
             open = false;
