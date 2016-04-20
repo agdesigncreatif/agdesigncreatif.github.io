@@ -60,8 +60,19 @@ body {
     word-wrap: break-word;
 
     animation: fadein 4s;
+    -webkit-animation:fadein 4s;
+    -o-animation:fadein 4s;
+    -moz-animation:fadein 4s;
+
+    -webkit-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    -moz-animation-delay: 4s;
     animation-delay: 4s;
+
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
 
     text-shadow: 1px 1px 4px black;
 }
