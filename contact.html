@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="icon" href="img/logo2.png">
+    <title>Contact - AGDesignCreatif</title>
+    <style>
+        #main-frame {
+                margin-top: 200px;
+                
+            }
+        .social-media {
+            width: 150px;
+            height: 150px;    
+            background-image: url(img/fblogo.png);
+            background-size: contain;
+            display:inline-block;      
+            margin: 20px auto;
+            margin-left: 10px;
+            margin-right: 10px;
+            transition-duration: 0.7s;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            border:none;
+        }
+        .social-media:hover {
+            filter: brightness(1.5)
+        }
+        @media only screen and (min-width: 768px) {
+            #main-frame {
+                margin-top: 250px;
+            }
+            .social-media {
+                width: 70px;
+                height: 70px;  
+            }
+        }
+    </style>
+</head>
+<body background="" style="" class="">
+    <div id="ul">
+        <li2><a href="index.html">AGDESIGNCREATIF</a></li2>
+        <dropdownbutton><a href="javascript:void(0)" onclick="DropDown()">☰</a></dropdownbutton>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="products.html">PRODUCTS</a></li>
+    </div>
+    <div id="dropdown">
+        <div id="dropdown-content">
+            <a href="products.html">PRODUCTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </div>
+
+    <div id="main-frame">
+        <h1><b>My Contact Information:</b></h1>
+        <h2>You can contact me through social media or by using my e-mail. The best ways to reach me are listed below:</h2>
+        <br />
+        <a href="products.html"><div class="social-media" style="background-image: url(img/fblogo.png);"></div></a>
+        <a href="mailto:nick.tkachov@hotmail.com" target="_blank"><div class="social-media" style="background-image: url(img/mail.png);"></div></a>
+    </div>
+    
+    <script type="text/javascript">
+        var open = false;
+        var dropelement = document.getElementById("dropdown-content")
+        var dropelement2 = document.getElementById("dropdown")
+        function DropDown() {
+            if (open) {
+                dropelement.style.display = "none"
+                dropelement2.style.animationName = "drop_up"
+                dropelement2.style.animationDuration = "0.5s"
+                dropelement2.style.animationFillMode = "forwards"
+                open = false;
+            } else {
+                dropelement.style.display = "block"
+                dropelement2.style.animationName = "drop_down"
+                dropelement2.style.animationDuration = "0.5s"
+                dropelement2.style.animationFillMode = "forwards"
+                open = true;
+            }
+        }
+    </script>
+</body>
+</html>

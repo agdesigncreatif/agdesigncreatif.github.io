@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="icon" href="img/logo2.png">
+    <title>Products - AGDesignCreatif</title>
+    <style>
+    </style>
+</head>
+<body background="" style="" class="">
+    <div id="openWindow" class="overlay">
+        <div class="overlay-content">
+            <div id="overlay-content2">
+                <div class="overlay-content3">
+                    <a href="#hiding" id="hiding" class="hide" onclick="document.getElementById('overlay-content2').style.display= 'none'">X</a>
+                    <div class="overlay-content4">
+                        <div id="overlay-image"></div>
+                        <h5 id="name">NAME OF PRODUCT</h5>
+                        <h6 id="stock">AMOUNTTTT</h6>
+                        <h6 style="color:green;padding-top: 135px;" id="price">PRICEEEEE</h6>
+                        <!--<button style="margin-right: 6px;">+ CART</button>-->
+                        <button>BUY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ul">
+        <li2><a href="index.html">AGDESIGNCREATIF</a></li2>
+        <dropdownbutton><a href="javascript:void(0)" onclick="DropDown()">☰</a></dropdownbutton>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="products.html">PRODUCTS</a></li>
+    </div>
+    <div id="dropdown">
+        <div id="dropdown-content">
+            <a href="products.html">PRODUCTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </div>
+
+    <div id="main-frame">
+        <h1><b>Welcome to Anna-Galina Design Creatif</b></h1>
+        <h2>Browse our many products.</h2>
+        <br />
+        <div id="dropbutton">
+            <a href="javascript:void(0);"onclick="opencat()">
+                <b>CATEGORY: ALL</b>
+                <div id="dropimage" style="bottom:5px;position:absolute;font-size: 180%"><b>☰</b></div>
+            </a>
+        </div>
+        <div id="categorydrop">
+            <div id="categorydrop-content">
+                <a href="javascript:void(0);" onclick="setcategory('all')">ALL<h12 id="all">[0]</h12></a>
+                <a href="javascript:void(0);" onclick="setcategory('earrings')">EARRINGS<h12 id="earrings">[0]</h12></a>
+                <a href="javascript:void(0);" onclick="setcategory('necklaces')">NECKLACES<h12 id="necklaces">[0]</h12></a>
+                <a href="javascript:void(0);" onclick="setcategory('bracelets')">BRACELETS<h12 id="bracelets">[0]</h12></a>
+                <a href="javascript:void(0);" onclick="setcategory('soutache2')">SOUTACHE BRAIDS<h12 id="soutache2">[0]</h12></a>
+                <a href="javascript:void(0);" onclick="setcategory('soutache')">SOUTACHE JEWELRY SETS<h12 id="soutache">[0]</h12></a>
+                <a href="javascript:void(0);" onclick="setcategory('beads1')">BEADED CROCHET NECKLACES<h12 id="beads1">[0]</h12></a>
+                <a href="javascript:void(0);" onclick="setcategory('beads2')">BEADED CROCHET BRACELETS<h12 id="beads2">[0]</h12></a>
+                <a href="javascript:void(0);" onclick="setcategory('scarf')">HIJAB, SCARF & SHAWL PINS<h12 id="scarf">[0]</h12></a>
+            </div>
+        </div>
+        <br />
+        <!--<div class="display-frame">
+            <a href="#openWindow" onclick="sendParams('image3.jpg', 40,'Pair of Pink Bracelets', 0);">
+                <div id="earrings" class="jewelry medium" style="background-image: url(image3.jpg);">
+                    <div class="enlarge" style="background-image: url(image3.jpg);">
+                        <div class="infobar">
+                            <hr class="blackline" />
+                            <h9>CDN$40</h9>
+                            <h10>QTY: 1</h10>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>-->
+       
+    </div>
+    <div id="social-frame">
+        <a href="products.html"><div class="social-media" style="background-image: url(img/findusonfb.png);background-repeat:no-repeat;"></div></a>
+    </div>
+    <script src ="javascript/main.js" type="text/javascript">
+        
+    </script>
+</body>
+</html>

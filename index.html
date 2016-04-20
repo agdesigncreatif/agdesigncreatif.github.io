@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <title>Welcome</title>
+    <style>
+       
+    </style>
+</head>
+<body background="" style="" class="">
+    <div id="background-img1">
+
+    </div>
+    <div class="bio">
+        <div class="bio-image">
+
+        </div>
+        <div class="bio-paragraph">
+            <p>Jewelry made with passion and heart. <br /> From hand-crafted earrings, necklaces and bracelets to Hijab pins and Soutache Braids, we have got it all.<br />  Check out our diverse catalogue. </p>
+        </div>
+        <a href="products.html"><button class="button">BROWSE</button></a>
+    </div>
+
+    <div class="top-page">
+
+    </div>
+
+    <script type="text/javascript">
+        var anim = document.getElementById("background-img1");
+        var imageNum = 1;
+        window.onload = function () {
+            anim.style.background = "url('img/image1.jpg') no-repeat center center"
+            anim.style.backgroundSize = "cover";
+            anim.style.animation = "test 20s ease infinite";
+            anim.style.left = "-100px";
+            anim.style.top = "-100px";
+            anim.style.position = "fixed";
+        }
+        changeImage = function () {
+            imageNum = imageNum + 1
+            if (imageNum == 6) {
+                imageNum = 1;
+            }
+            if (imageNum == 1) {
+                anim.style.background = "url('img/image1.jpg') no-repeat center center";
+            } else if (imageNum == 2) {
+                anim.style.background = "url('img/image2.jpg') no-repeat center center";
+            } else if (imageNum == 3) {
+                anim.style.background = "url('img/image3.jpg') no-repeat center center";
+            } else if (imageNum == 4) {
+                anim.style.background = "url('img/image4.jpg') no-repeat center center";
+            } else if (imageNum == 5) {
+                anim.style.background = "url('img/image5.jpg') no-repeat center center";
+            }
+
+            anim.style.backgroundSize = "cover";
+            anim.style.animation = "test 20s ease infinite";
+            anim.style.left = "-100px";
+            anim.style.top = "-100px";
+            anim.style.position = "fixed";
+        }
+
+        anim.addEventListener('webkitAnimationIteration', changeImage, false);
+        anim.addEventListener('oAnimationIteration', changeImage, false);
+        anim.addEventListener('animationiteration', changeImage, false);
+        anim.addEventListener('msAnimationIteration', changeImage, false);
+
+
+    </script>
+</body>
+</html>

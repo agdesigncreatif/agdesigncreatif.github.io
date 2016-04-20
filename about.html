@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="icon" href="img/logo2.png">
+    <title>About - AGDesignCreatif</title>
+    <style>
+        @keyframes small_in {
+            from {
+                opacity: 0;
+                width: 400px;
+                height: 400px;
+                border-radius: 200px;
+            }
+
+            to {
+                opacity: 1;
+                width: 200px;
+                height: 200px;
+                border-radius: 100px;
+            }
+        }
+
+        @keyframes par_in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            overflow-y: hidden;
+        }
+
+        #profile-image {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background-image: url(img/sample.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 50%, 50%;
+            background-color: white;
+            border-radius: 100px;
+            margin: 0 auto;
+            opacity: 0;
+            box-shadow: 0 10px 20px 0px rgba(0,0,0,0.4);
+            animation: small_in;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 0s;
+        }
+
+        h1 {
+            animation: par_in;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 2s;
+            opacity: 0;
+        }
+
+        h2 {
+            animation: par_in;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-delay: 3.5s;
+            opacity: 0;
+        }
+
+        #main-frame {
+            margin-top: 100px;
+        }
+
+        button {
+            color: white;
+            border: 2px solid white;
+            box-shadow: 0 10px 20px 0px rgba(0,0,0,0.4);
+            position: relative;
+            margin: 0 auto;
+            float: none;
+            font-size: 20px;
+            animation: par_in;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 7s;
+            opacity: 0;
+        }
+
+            button:hover {
+                color: #222122;
+                background-color: white;
+                border: 2px solid white;
+            }
+
+        @media only screen and (min-width: 768px) {
+            #main-frame {
+                margin-top: 150px;
+            }
+        }
+
+        @media only screen and (min-width: 1100px) {
+            button {
+                font-size: 25px;
+            }
+        }
+
+        @media only screen and (min-width: 1500px) {
+            button {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body background="" style="" class="">
+    <div id="ul">
+        <li2><a href="index.html">AGDESIGNCREATIF</a></li2>
+        <dropdownbutton><a href="javascript:void(0)" onclick="DropDown()">☰</a></dropdownbutton>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="products.html">PRODUCTS</a></li>
+    </div>
+    <div id="dropdown">
+        <div id="dropdown-content">
+            <a href="products.html">PRODUCTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </div>
+
+    <div id="main-frame">
+        <div id="profile-image"></div>
+        <h1><b>How it started:</b></h1>
+        <h2 style="font-family: 'Arial', sans-serif;font-weight:normal;">
+            My journey to soutache jewelry started 2 years ago when my parents came to visit me in Toronto. Just a short info I was born in Belarus but came to live in Canada 7 years ago with my husband and 2 sons. So my mom, knowing my creative heart, as I like to learn to do new things, brought me a book by Anneta Valious in Russian. I loved all the designs and I decided to give it a try.
+            At first it seemed too hard to do but later I slowly discovered better quality materials to work with. If you wish to contact me, my information can be found below.
+        </h2>
+        <br />
+        <button onclick="location.replace('contact.html')">Contact me!</button>
+    </div>
+    <script type="text/javascript">
+        var open = false;
+        var dropelement = document.getElementById("dropdown-content")
+        var dropelement2 = document.getElementById("dropdown")
+        function DropDown() {
+            if (open) {
+                dropelement.style.display = "none"
+                dropelement2.style.animationName = "drop_up"
+                dropelement2.style.animationDuration = "0.5s"
+                dropelement2.style.animationFillMode = "forwards"
+                open = false;
+            } else {
+                dropelement.style.display = "block"
+                dropelement2.style.animationName = "drop_down"
+                dropelement2.style.animationDuration = "0.5s"
+                dropelement2.style.animationFillMode = "forwards"
+                open = true;
+            }
+        }
+    </script>
+</body>
+</html>
