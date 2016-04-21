@@ -573,6 +573,12 @@ h2 {
     width: 250px;
     height: 170px;
 }
+.medium {
+    width: 100%;
+    height: 350px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
 
 .medium:hover {
 }
@@ -634,7 +640,7 @@ h2 {
         }
 
         .overlay:target .overlay-content3 {
-            width: 400px;
+            width: 80%;
             height: 700px;
         }
 
@@ -682,35 +688,37 @@ h2 {
 
 #overlay-image {
     margin-top: 60px;
-    width: 360px;
+    width: 75%;
     height: 300px;
     position: absolute;
     float: left;
     background-image: url(../img/sample.jpg);
     background-repeat: no-repeat;
     background-position: 50%,50%;
-    background-size: cover;
+    background-size: contain;
     display: block;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .hide {
     display: normal;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     text-decoration: none;
     font-weight: bold;
     font-family: 'Arial', sans-serif;
     font-size: 30px;
     color: darkgrey;
     background-color: transparent;
-    border-radius: 5px;
     padding: 8px 15px;
+    background-color: rgba(100,100,100,0.7);
+    margin-left: 30%;
+    border-radius: 30px;
     transition: color 0.2s;
     -webkit-transition: color 0.2s;
     -moz-transition: color 0.2s;
     -o-transition: color 0.2s;
-    margin-left: 150px;
+    margin-top: -20px;
 }
 
     .hide:hover {
@@ -732,7 +740,7 @@ h5 {
 }
 
 h6 {
-    padding-top: 280px;
+    padding-top: 270px;
     color: #0080ff;
     font-family: 'Arial', sans-serif;
     font-size: 130%;
@@ -845,7 +853,7 @@ h12 {
 
 .social-media {
     height: 150px;
-    width: 400px;
+    width: 80%;
     background-image: url(img/fblogo.png);
     background-size: contain;
     display: inline-block;
@@ -978,7 +986,7 @@ h12 {
     .hide {
         display: normal;
         cursor: pointer;
-        position: fixed;
+        position: absolute;
         text-decoration: none;
         font-weight: bold;
         font-family: 'Arial', sans-serif;
@@ -992,6 +1000,8 @@ h12 {
         -moz-transition: color 0.2s;
         -o-transition: color 0.2s;
         margin-left: -47px;
+        margin-top: 0px;
+        
     }
 
         .hide:hover {
