@@ -576,8 +576,8 @@ h2 {
 .medium {
     width: 100%;
     height: 350px;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .medium:hover {
@@ -641,7 +641,7 @@ h2 {
 
         .overlay:target .overlay-content3 {
             width: 80%;
-            height: 700px;
+            height: 580px;
         }
 
         .overlay:target .overlay-content4 {
@@ -740,7 +740,7 @@ h5 {
 }
 
 h6 {
-    padding-top: 270px;
+    padding-top: 285px;
     color: #0080ff;
     font-family: 'Arial', sans-serif;
     font-size: 130%;
@@ -877,7 +877,9 @@ h12 {
         -moz-filter: brightness(1.5);
         -ms-filter: brightness(1.5);
     }
-
+#price {
+    padding-top: 0px;
+}
 @media only screen and (min-width: 600px) {
     /*tablets*/
 
@@ -885,6 +887,9 @@ h12 {
 
 @media only screen and (min-width: 768px) {
     /*desktop*/
+    #price {
+        padding-top: 150px;
+    }
     .social-media {
         width: 200px;
         height: 50px;
