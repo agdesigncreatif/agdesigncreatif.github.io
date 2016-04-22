@@ -5,7 +5,7 @@ body {
 .top-page {
     z-index: 1;
     position: fixed;
-    height: 360px;
+    height: 150px;
     background-color: #660066;
     width: 100%;
     left: 0;
@@ -15,7 +15,7 @@ body {
 
 .bio {
     position: relative;
-    padding-top: 200px;
+    padding-top: 0px;
     z-index: 3;
     margin: 0 auto;
     text-align: center;
@@ -151,8 +151,22 @@ body {
         background-color: white;
     }
 
-@media only screen and (min-width: 600) {
+@media only screen and (min-width: 400px) {
+    .top-page {
+        height: 360px;
+    }
+    .bio {
+        padding-top:200px;
+    }
+}
+@media only screen and (min-width: 600px) {
     /*tablets*/
+    .bio {
+        padding-top:200px;
+    }
+    .top-page {
+        height: 430px;
+    }
     .bio-image {
         width: 300px;
         height: 200px;
