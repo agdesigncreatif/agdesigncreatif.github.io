@@ -8,6 +8,7 @@ var dropelement2 = document.getElementById("dropdown")
 var dropimageel = document.getElementById("dropimage")
 var dropimageel2 = document.getElementById("dropbutton")
 var categorydrop = document.getElementById("categorydrop-content")
+var displayVar = false;
 var tableItems = ["earrings", "necklaces", "bracelets", "soutache", "soutache2", "beads1", "beads2", "scarf"]
 window.onload = function () {
     
@@ -70,25 +71,7 @@ window.onload = function () {
             open = false;
         }
     }
-    insertProducts("image2.JPG", "20", "Pair of Pink Earrings", "1", "medium", "earrings");
-    insertProducts("image3.jpg", "21", "Pair of Pink Bracelets", "1", "medium", "bracelets");
-    insertProducts("image6.JPG", "22", "Pin", "1", "medium", "scarf");
-    insertProducts("image1.jpg", "23", "Yellow Necklace", "1", "medium", "necklaces");
-    insertProducts("image4.jpg", "24", "Turquoise Bracelet with Pattern", "1", "medium", "bracelets");
-    insertProducts("image9.JPG", "25", "Multiple Colorful Pins", "1", "medium", "scarf");
-    insertProducts("image7.jpg", "26", "Two Hexagon-Shaped Pins", "1", "medium", "scarf");
-    insertProducts("image8.JPG", "27", "Red and Colorful Pins", "1", "medium", "scarf");
-    insertProducts("image10.JPG", "28", "Yellow Earrings", "1", "medium", "earrings");
-    insertProducts("image11.JPG", "29", "Pink Earrings", "1", "medium", "earrings");
-    insertProducts("image12.JPG", "30", "Orange Earrings w/ Bracelet", "1", "medium", "earrings");
-    insertProducts("image13.JPG", "31", "Blue Earrings w/ Necklace", "1", "medium", "earrings");
-    insertProducts("image14.JPG", "32", "Red Earrings w/ Necklace", "1", "medium", "earrings");
-    insertProducts("image15.JPG", "33", "Blue and Pink Bracelet", "1", "medium", "bracelets");
-    insertProducts("image16.JPG", "34", "Turquoise Bracelet", "1", "medium", "bracelets");
-    insertProducts("image17.JPG", "35", "Red and White Pin", "1", "medium", "scarf");
-    insertProducts("image18.JPG", "36", "Yellow Bracelet", "1", "medium", "bracelets");
-    insertProducts("image19.JPG", "37", "Pink Earrings w/ Bracelet", "1", "medium", "earrings");
-    insertProducts("image20.JPG", "38", "Colorful Earrings", "1", "medium", "earrings");
+    
 
     var earrings = document.getElementsByClassName("earrings")
     var necklaces = document.getElementsByClassName("necklaces")
@@ -109,7 +92,21 @@ window.onload = function () {
     document.getElementById('beads2').innerHTML = " [" + beads2.length + "]"
     document.getElementById('scarf').innerHTML = " [" + scarf.length + "]"
 }
-function insertProducts(image, price, title, amount, size, category) {
+function toggleText() {
+    
+    if (displayVar) {
+        document.getElementById('infobutton').innerHTML = "INFO"
+        document.getElementById('paragraph').style.display = "none"
+        document.getElementById('overlay-image').style.display = 'block'
+        displayVar = false;
+    } else {
+        document.getElementById('paragraph').style.display = "block"
+        document.getElementById('infobutton').innerHTML = "BACK"
+        document.getElementById('overlay-image').style.display = 'none'
+        displayVar = true;
+    }
+}
+function insertProducts(image, price, title, amount, size, category, paragraph) {
     var qtyvar;
     var qtycolor = "#b30000";
     if (amount == "0") {
@@ -134,11 +131,15 @@ function insertProducts(image, price, title, amount, size, category) {
     var href = document.createElement("a")
     href.setAttribute("href", "#openWindow")
     href.onclick = function () {
+        displayVar = false;
+        document.getElementById('infobutton').innerHTML = "INFO"
+        document.getElementById('paragraph').style.display = "none"
+        document.getElementById('overlay-image').style.display = 'block'
         document.getElementById('overlay-content2').style.display = 'table-cell'
         document.getElementById('name').innerHTML = title
         document.getElementById('price').innerHTML = "PRICE: CDN$" + price
         document.getElementById('overlay-image').style.backgroundImage = 'url(./img/' + image + ')'
-
+        document.getElementById('paragraph').innerHTML = paragraph
         if (amount == "0") {
             document.getElementById('stock').style.color = "#b30000"
             document.getElementById('stock').innerHTML = "OUT OF STOCK"

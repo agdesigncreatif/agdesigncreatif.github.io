@@ -880,7 +880,18 @@ h12 {
 #price {
     padding-top: 0px;
 }
-
+p {
+    width: 75%;
+    text-align:center;
+    padding-left: 10px;
+    margin-top: -370px;
+    position:absolute;
+    color:black;
+    font-size: 17px;
+    word-wrap: break-word;
+    font-family: 'Arial', sans-serif;
+    display:none;
+}
 
 @media only screen and (min-width: 400px) {
     /*ipods*/
@@ -905,14 +916,34 @@ h12 {
     #price {
         padding-top: 0px;
     }
+    p {
+        width: 75%;
+        text-align:center;
+        padding-left: 20px;
+        font-size: 20px;
+        margin-top: -450px;
+    }
 }
 @media only screen and (min-width: 600px) {
     /*tablets*/
-
+    p {
+        width: 75%;
+        text-align:center;
+        padding-left: 20px;
+        margin-top: -450px;
+        font-size: 20px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
     /*desktop*/
+    p {
+        width: 400px;
+        text-align:left;
+        padding-left: 20px;
+        margin-top: -300px;
+        font-size: 20px;
+    }
     #price {
         padding-top: 150px;
     }
@@ -954,7 +985,7 @@ h12 {
         float: right;
         margin-top: -30px;
         margin-left: 2px;
-        margin-right: 55px;
+        margin-right: 10px;
     }
 
     h6 {

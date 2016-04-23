@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    </style>
+</head>
+<body background="" style="" class="">
+    <fieldset>
+        <legend>Generate Item Code</legend>
+        <form onsumbit="asd();return false;">
+            Name of Product:<br>
+            <input type="text" id="title"><br>
+            Category of Product:<br>
+            <select id="category">
+                <option value="earrings">EARRINGS</option>
+                <option value="necklaces">NECKLACES</option>
+                <option value="bracelets">BRACELETS</option>
+                <option value="soutache2">SOUTACHE BRAIDS</option>
+                <option value="soutache">SOUTACHE JEWELRY SETS</option>
+                <option value="beads1">BEADED CROCHET NECKLACES</option>
+                <option value="beads2">BEADED CROCHET BRACELETS</option>
+                <option value="scarf">HIJAB, SCARF & SHAWL PINS</option>
+            </select><br>
+            Description of Product:<br>
+            <textarea id="paragraph" rows="10" cols="30">Description of product here...</textarea><br>
+            Price of Product:<br>
+            <input type="text" id="price"><br>
+            Quantity of Product:<br>
+            <input type="text" id="amount"><br>
+            Image Link:<br>
+            <input type="text" id="image"><br>
+        </form>
+        <button onclick="createProduct()">Generate Product</button><br>
+    </fieldset>
+    <h1 id="newpro" style="font-size: 120%"></h1>
+    <script type="text/javascript">
+        function createProduct() {
+            var image = document.getElementById('image').value
+            var price = document.getElementById('price').value
+            var title = document.getElementById('title').value
+            var amount = document.getElementById('amount').value
+            var category1 = document.getElementById('category')
+            var category = category1.options[category1.selectedIndex].value;
+            var paragraph = document.getElementById('paragraph').value
+            document.getElementById('newpro').innerHTML = 'insertProduct("' + image + '","' + price + '","' + title + '","' + amount + '","medium","' + category + '","' + paragraph + '")'
+            return false;
+        }
+    </script>
+</body>
+</html>
