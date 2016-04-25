@@ -10,8 +10,54 @@ var dropimageel2 = document.getElementById("dropbutton")
 var categorydrop = document.getElementById("categorydrop-content")
 var displayVar = false;
 var tableItems = ["earrings", "necklaces", "bracelets", "soutache", "soutache2", "beads1", "beads2", "scarf"]
-window.onload = function () {
+var nameVar = ""
+var emailVar = ""
+var postalcodeVar = ""
+var additionalcommentsVar = ""
+var link = document.getElementById('subButton')
+var email = document.getElementById('email').value
+var name = document.getElementById('name2').value
+var product = document.getElementById('name').innerHTML
+var price = document.getElementById('price').innerHTML
+var postalcode = document.getElementById('postalcode').value
+var comment = document.getElementById('comment').value
+link.onclick = function () {
+    var openYes = true
     
+    link = document.getElementById('subButton')
+    email = document.getElementById('email').value
+    name = document.getElementById('name2').value
+    product = document.getElementById('name').innerHTML
+    price = document.getElementById('price').innerHTML
+    postalcode = document.getElementById('postalcode').value
+    comment = document.getElementById('comment').value
+    if (email == "") {
+        document.getElementById('email').style.border = "1px solid rgba(255,0,0,0.84)"
+        openYes = false
+    }
+    if (postalcode == "") {
+        document.getElementById('postalcode').style.border = "1px solid rgba(255,0,0,0.84)"
+        openYes = false
+    }
+    if (name == "") {
+        document.getElementById('name2').style.border = "1px solid rgba(255,0,0,0.84)"
+        openYes = false
+        
+    } 
+    if (openYes){
+        this.href = "mailto:agdesigncreatif@gmail.com?subject=AUTOMATED MESSAGE FROM AGDESIGNCREATIF&body=";
+        this.href += createMail();
+        alert("An E-mail window will now open. Please press 'send' once the window is open. If a new window does not open, select the e-mail program when prompted.")
+    } else {
+        alert("Please fill all fields.")
+    }
+}
+
+function createMail() {
+    return 'Hello! [ ' + name + ' ] at [ ' + email + ' ] has requested to buy a product.%0D%0A The product is: [ ' + product + ' ] at the cost of: [ ' + price + ' ]%0D%0A The indicated postal code is: [ ' + postalcode + ' ]%0D%0A Comment from user: %0D%0A' + comment
+}
+window.onload = function () {
+
     if (window.innerWidth < 768) {
         element.style.animationName = "bar_in"
         element.style.animationDuration = "0s"
@@ -71,7 +117,7 @@ window.onload = function () {
             open = false;
         }
     }
-    
+
 
     var earrings = document.getElementsByClassName("earrings")
     var necklaces = document.getElementsByClassName("necklaces")
@@ -92,8 +138,18 @@ window.onload = function () {
     document.getElementById('beads2').innerHTML = " [" + beads2.length + "]"
     document.getElementById('scarf').innerHTML = " [" + scarf.length + "]"
 }
+function resetForm() {
+    alert("HOW IT WORKS: Once you enter the information required below, the order will be confirmed by me through the email and I will send you the due amount for the object + shipping.")
+    document.getElementById('email').style.border = "1px solid"
+    document.getElementById('postalcode').style.border = "1px solid"
+    document.getElementById('name2').style.border = "1px solid"
+
+    document.getElementById('email').style.borderColor = "grey"
+    document.getElementById('postalcode').style.borderColor = "grey"
+    document.getElementById('name2').style.borderColor = "grey"
+}
 function toggleText() {
-    
+
     if (displayVar) {
         document.getElementById('infobutton').innerHTML = "INFO"
         document.getElementById('paragraph').style.display = "none"
@@ -131,6 +187,7 @@ function insertProducts(image, price, title, amount, size, category, paragraph) 
     var href = document.createElement("a")
     href.setAttribute("href", "#openWindow")
     href.onclick = function () {
+
         displayVar = false;
         document.getElementById('infobutton').innerHTML = "INFO"
         document.getElementById('paragraph').style.display = "none"

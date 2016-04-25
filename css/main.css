@@ -573,6 +573,7 @@ h2 {
     width: 250px;
     height: 170px;
 }
+
 .medium {
     width: 100%;
     height: 350px;
@@ -580,8 +581,8 @@ h2 {
     margin-right: 0px;
 }
 
-.medium:hover {
-}
+    .medium:hover {
+    }
 
 .large {
     width: 320px;
@@ -647,6 +648,7 @@ h2 {
         .overlay:target .overlay-content4 {
             opacity: 1;
         }
+        
 
 .overlay-content {
     display: table;
@@ -728,6 +730,10 @@ h2 {
     .hide:target .overlay-content {
         opacity: 0;
     }
+    .hide:target #orderform {
+        opacity: 0;
+    }
+   
 
 h5 {
     margin-top: 20px;
@@ -851,6 +857,19 @@ h12 {
     margin-left: 4px;
 }
 
+h13 {
+    display: block;
+    font-size: 15px;
+    color: #4d4d4d;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .social-media {
     height: 150px;
     width: 80%;
@@ -877,32 +896,57 @@ h12 {
         -moz-filter: brightness(1.5);
         -ms-filter: brightness(1.5);
     }
+
 #price {
     padding-top: 0px;
 }
+
 p {
     width: 75%;
-    text-align:center;
+    text-align: center;
     padding-left: 10px;
     margin-top: -370px;
-    position:absolute;
-    color:black;
+    position: absolute;
+    color: black;
     font-size: 17px;
     word-wrap: break-word;
     font-family: 'Arial', sans-serif;
-    display:none;
+    display: none;
+}
+
+#orderform {
+    float: unset;
+}
+
+input {
+    width: 80%;
+}
+
+textarea {
+    width: 80%;
 }
 
 @media only screen and (min-width: 400px) {
     /*ipods*/
+    input {
+        width: 80%;
+    }
+
+    textarea {
+        width: 80%;
+    }
+
+
     #overlay-image {
-        margin-top: 60px; 
+        margin-top: 60px;
         margin-left: 20px;
     }
+
     .overlay:target .overlay-content3 {
-            width: 80%;
-            height: 580px;
-        }
+        width: 80%;
+        height: 580px;
+    }
+
     h6 {
         padding-top: 275px;
         color: #0080ff;
@@ -916,37 +960,96 @@ p {
     #price {
         padding-top: 0px;
     }
+
     p {
         width: 75%;
-        text-align:center;
+        text-align: center;
         padding-left: 20px;
         font-size: 20px;
         margin-top: -450px;
     }
+
+    #orderform {
+        float: unset;
+    }
+
+    h13 {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
+
 @media only screen and (min-width: 600px) {
     /*tablets*/
+    input {
+        width: 80%;
+        margin-left: 0px;
+    }
+
+    textarea {
+        width: 80%;
+        margin-left: 0px;
+    }
+
     p {
         width: 75%;
-        text-align:center;
+        text-align: center;
         padding-left: 20px;
         margin-top: -450px;
         font-size: 20px;
+    }
+
+    #orderform {
+        float: unset;
+    }
+
+    h13 {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
 @media only screen and (min-width: 768px) {
     /*desktop*/
+    #subButton {
+        float: left;
+        margin-left: 20px;
+    }
+
+    input {
+        width: 400px;
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    textarea {
+        width: 400px;
+        margin-left: 20px;
+    }
+
+    h13 {
+        text-align: left;
+        padding-top: 0px;
+    }
+
+    #orderform {
+        float: left;
+    }
+
     p {
         width: 400px;
-        text-align:left;
+        text-align: left;
         padding-left: 20px;
         margin-top: -300px;
         font-size: 20px;
     }
+
     #price {
         padding-top: 150px;
     }
+
     .social-media {
         width: 200px;
         height: 50px;
@@ -1063,7 +1166,6 @@ p {
         -o-transition: color 0.2s;
         margin-left: -47px;
         margin-top: 0px;
-        
     }
 
         .hide:hover {
