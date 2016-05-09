@@ -186,6 +186,7 @@ function insertProducts(image, price, title, amount, size, category, paragraph) 
     div2.className = "jewelry " + size + " " + category
     //div2.id = category
     div2.style.backgroundImage = "url(./img/" + image + ")"
+    div2.title = name;
     div.appendChild(div2);
 
     var href = document.createElement("a")
