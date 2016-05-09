@@ -139,7 +139,7 @@ window.onload = function () {
     document.getElementById('scarf').innerHTML = " [" + scarf.length + "]"
 }
 function resetForm() {
-    alert("HOW IT WORKS: Once you enter the information required below, the order will be confirmed by me through the email and I will send you the due amount for the object + shipping.")
+    alert("PLEASE review the Shipping & Return policy before purchasing!")
     document.getElementById('email').style.border = "1px solid"
     document.getElementById('postalcode').style.border = "1px solid"
     document.getElementById('name2').style.border = "1px solid"
@@ -153,11 +153,15 @@ function toggleText() {
     if (displayVar) {
         document.getElementById('infobutton').innerHTML = "INFO"
         document.getElementById('paragraph').style.display = "none"
+        document.getElementById('price').style.opacity = 1
+        document.getElementById('stock').style.opacity = 1
         document.getElementById('overlay-image').style.display = 'block'
         displayVar = false;
     } else {
         document.getElementById('paragraph').style.display = "block"
         document.getElementById('infobutton').innerHTML = "BACK"
+        document.getElementById('price').style.opacity = 0
+        document.getElementById('stock').style.opacity = 0
         document.getElementById('overlay-image').style.display = 'none'
         displayVar = true;
     }
@@ -187,7 +191,8 @@ function insertProducts(image, price, title, amount, size, category, paragraph) 
     var href = document.createElement("a")
     href.setAttribute("href", "#openWindow")
     href.onclick = function () {
-
+        document.getElementById('price').style.opacity = 1
+        document.getElementById('stock').style.opacity = 1
         displayVar = false;
         document.getElementById('infobutton').innerHTML = "INFO"
         document.getElementById('paragraph').style.display = "none"
